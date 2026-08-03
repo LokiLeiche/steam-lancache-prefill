@@ -3,46 +3,46 @@
 <div data-cli-player="../casts/prefill.cast" data-rows=13></div>
 <br>
 
-## Overview
+## Übersicht
 
-Automatically fills a Lancache with games from {{ gaming_service_name }} so that subsequent downloads will be served from the Lancache, improving speeds and reducing load on your internet connection.
+Füllt einen Lancache-Server autmatisch mit {{ gaming_service_name }} Spielen, sodass zukünftige Downloads von Lancache direkt beantwortet können, was Geschwindigkeiten erhöhen und die Netzwerkauslastung verringern kann.
 
-Keeps track of which games have been previously downloaded, and will only download games that have updates.
+Speichert zuvor heruntergeladene Spiele und lädt beim erneuten Ausführen nur Spiele herunter, für die neue Versionen verfügbar sind.
 
 -----
 
-## Example usage
+## Beispiel
 
-!!! Note
-    This command will automatically include any apps that have been selected using `select-apps`, regardless of any additional optional flags specified.
+!!! Achtung
+    Dieser Befehl lädt automatisch alle Apps herunter, die mit dem Befehl `select-apps` ausgewählt wurden, unabhängig von zusätzlichen Optionen.
 
-Initiating a `prefill` run is as simple as running the following from the terminal:
+Um den `prefill` Prozess zu starten, muss einfach nur der folgende Befehl im Terminal eingegeben werden:
 ```powershell
 ./{{prefill_name}} prefill
 ```
 
-At the beginning of a `prefill` run, **{{prefill_name}}** will check to see which apps have new updates since the last `prefill` run, as well as checking to see if any apps have never been successfully prefilled.  If `prefill` detects that there are any apps that need to be downloaded, it will begin doing so. If there are no apps that need to be downloaded, then the `prefill` run will simply finish immediately.
+Nach Beginn des `prefill` Befehl, prüft **{{prefill_name}}**, welche Apps seit dem letzten ausführen neue Versionen erhalten haben, oder noch nie erfolgreich heruntergeladen wurden. Wenn `prefill` eine solche App erkennt, beginnt es mit dem Download. Falls keine Apps heruntergeladen werden müssen, beendet der Prozess sich selbst.
 
 
-### Prefilling your entire {{gaming_service_name}} library
+### Deine komplette {{gaming_service_name}} Bibliothek herunterladen
 
-Depending on the size of your library, and which apps you want to prefill, it may be easier to simply prefill the entire library instead of manually selecting your apps with `select-apps`. This will also automatically include any new games you may have purchased, without having to use `select-apps` to select the newly purchased game.
+Je nachdem wie groß deine Bibliothek ist und wie viele Apps du herunterladen willst, könnte es einfacher sein, die komplette Bibliothek herunterzuladen, anstatt die Apps einzeln mit dem Befehl `select-apps` auszuwählen. Dadurch werden auch neu gekaufte Apps direkt mit aufgenommen und mpssen nicht manuell mit `select-apps` nach dem Kauf hinzugefügt werden.
 
 ```powershell
 ./{{prefill_name}} prefill --all
 ```
 
-### Ensuring your cache is fully primed
+### Sicherstellen, dass der Cache vollständig gefüllt ist
 
-Suppose that you have an event coming up, and you want to be 100% certain that your Lancache is prefilled.  Normally running `prefill` will ensure that you have the latest update data primed, however you may want to have complete certainty that it is.  Adding the `--force` flag will make **{{prefill_name}}** re-download every app, ignoring the fact that they may have already been up to date from a previous run.  Because **{{prefill_name}}** will be re-downloading every app again from start to finish, any data that may be missing will be filled in again.
+Wenn beispielsweise bald ein Event ansteht und du zu 100% sicher sein willst, dass alle Apps und alle Updates heruntegeladen und im Lancache zwischengespeichert wurden, kannst du diesen Befehl verwenden. Normalerweise sollte `prefill` alle ausgewählten apps immer mit allen aktuellen Updates herunterladen, durch verschiedene Gründe könnten apps nicht mehr zwischengespeichert sein, auch wenn sie das eigentlich sollten. Mit der zusätzlichen Option `--force` wird **{{prefill_name}}** gezwungen, alle Apps erneut herunterzuladen, auch wenn sie schon zwischengespeichert sind. Dadurch dass alle Apps vollständig neu heruntergeladen werden, werden sämtliche fehlenden Dateien ergänzt.
 
 ```powershell
 ./{{prefill_name}} prefill --force
 ```
 
-### Combining multiple flags
+### Mehrere Optionen kombinieren
 
-It is possible to combine multiple flags together in a single command, rather than having to use them separately one at a time.  For example, the following command will prefill the most popular games on Steam, only download the Linux version, and display more detailed log output:
+Es ist möglich mehrere Optionen in einem einzelnen Befehl zu kombinieren, anstatt jede einzeln zu verwenden. Der folgende Befehl wählt beispielsweise die meistgespielten Spiele von Steam aus, lädt nur die Linux version herunter und gibt zusätzlich mehr Details aus:
 
 ```powershell
 ./{{prefill_name}} prefill --top --os linux --verbose

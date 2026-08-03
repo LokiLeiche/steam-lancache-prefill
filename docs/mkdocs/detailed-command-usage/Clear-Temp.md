@@ -16,6 +16,6 @@ For most users it isn't necessary to use this command, however it may be useful 
 
 ## Options
 
-| Option      |     |      |
-| ----------- | --- | ---  |
+| Option      |     |                                                              |
+| ----------- | --- | ------------------------------------------------------------ |
 | --yes       | -y  | When specified, will clear the temp files without prompting. |
