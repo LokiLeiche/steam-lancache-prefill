@@ -80,6 +80,8 @@ Two important measurements to keep an eye on, are the overall `CPU` usage, as we
 
 ![benchmark-run-glances](images/benchmark-run-glances.png){: style="width:350px"}
 
+# Options
+
 | Option        |     | Values      | Default  |                                                                                                                                                                                                                                  |
 | ------------- | --- | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | --concurrency | -c  | 1-100       | **30**   | The maximum number of concurrent requests in flight at one time. A higher number may improve maximum throughput, but may possibly have a negative effect if the cache server cannot process the concurrent requests fast enough. |
