@@ -1,15 +1,15 @@
 # Docker Setup Guide
 
-!!! Note
-    Docker ist nicht zwingend erforderlich um **{{prefill_name}} zu nutzen, da es eine komplett eigenständige portable App ist.
+!!! Hinweis
+    Docker ist nicht zwingend erforderlich, um **{{prefill_name}}** zu nutzen, da es eine komplett eigenständige App ist.
 
-Diese Anleitung soll dabei helfen **{{prefill_name}}** als Docker Image [(DockerHub)](https://hub.docker.com/r/tpill90/{{repo_name}}/tags) aufzusetzen und zu verstehen, wie man damit interagiert. Diese Anleitung enthält keine genauen Anweisung zur Verwendung von **{{prefill_name}}** selbst, diese kann unter [Getting Started](https://github.com/tpill90/{{repo_name}}#getting-started) gefunden werden.
+Diese Anleitung soll dabei helfen **{{prefill_name}}** als Docker Image ([DockerHub](https://hub.docker.com/r/tpill90/{{repo_name}}/tags)) aufzusetzen und zu verstehen, wie man damit interagiert. Diese Anleitung enthält keine genauen Anweisung zur Verwendung von **{{prefill_name}}** selbst, diese kann unter [Getting Started](https://github.com/tpill90/{{repo_name}}#getting-started) gefunden werden.
 
------
+---
 
 ## Allgemeine Interaktion über die Konsole
 
-!!! Note
+!!! Hinweis
     Arm64 wird ebenfalls unterstützt.  Nutze den Tag `latest-arm64` statt `latest` in den folgenden Beispielen.
 
 Um die aktuellste Version des Containers herunterzuladen, öffne eine Konsole und führe den folgenden Befehl aus:
@@ -34,7 +34,7 @@ docker run -it --rm --net=host  \
   select-apps
 ```
 
------
+---
 
 ## Nächste Schritte
 

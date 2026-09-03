@@ -9,7 +9,7 @@ Automatically fills a Lancache with games from {{ gaming_service_name }} so that
 
 Keeps track of which games have been previously downloaded, and will only download games that have updates.
 
------
+---
 
 ## Example usage
 
@@ -48,7 +48,7 @@ It is possible to combine multiple flags together in a single command, rather th
 ./{{prefill_name}} prefill --top --os linux --verbose
 ```
 
------
+---
 
 ## Options
 

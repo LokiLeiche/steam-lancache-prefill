@@ -10,9 +10,7 @@ These files are saved locally in order to dramatically speed up future `prefill`
 
 For most users it isn't necessary to use this command, however it may be useful to free up some disk space if you are running low on storage, or to reset any temp data to assist with debugging {{prefill_name}}.
 
-
-
------
+---
 
 ## Options
 
